@@ -191,13 +191,24 @@ document.addEventListener('DOMContentLoaded', () => {
             '<div class="tech-icon"><i class="fas fa-layer-group" style="color: #fff;"></i><span>Next.js</span></div>'
         ];
 
-        TagCloud('.skills-sphere', texts, {
+        const tc = TagCloud('.skills-sphere', texts, {
             radius: window.innerWidth < 768 ? 130 : 170,
             maxSpeed: 'normal',
             initSpeed: 'normal',
             direction: 135,
             keep: true,
-            useHTML: true
+            useContainerInlineStyles: true,
+            useItemInlineStyles: true
         });
+
+        // Workaround: TagCloud might render as raw text, we need to force innerHTML
+        setTimeout(() => {
+            document.querySelectorAll('.tagcloud--item').forEach(item => {
+                const text = item.innerText || item.textContent;
+                if (text && text.includes('<div')) {
+                    item.innerHTML = text;
+                }
+            });
+        }, 100);
     }
 });
