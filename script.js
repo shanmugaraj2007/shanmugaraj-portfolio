@@ -211,4 +211,49 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, 100);
     }
+
+    // AI Chatbot Logic
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatWindow = document.getElementById('chat-window');
+    const closeChat = document.getElementById('close-chat');
+    const chatInput = document.getElementById('chat-input');
+    const sendChat = document.getElementById('send-chat');
+    const chatMessages = document.getElementById('chat-messages');
+
+    if (chatToggle && chatWindow) {
+        chatToggle.addEventListener('click', () => {
+            chatWindow.classList.toggle('open');
+        });
+
+        closeChat.addEventListener('click', () => {
+            chatWindow.classList.remove('open');
+        });
+
+        const handleSend = () => {
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            // Add user message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'message user-message';
+            userMsg.innerText = text;
+            chatMessages.appendChild(userMsg);
+            chatInput.value = '';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Simulate bot typing and responding
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'message bot-message';
+                botMsg.innerText = "I am currently just a UI placeholder while Shanmugaraj trains my AI model! You can use the contact form to reach out to him directly.";
+                chatMessages.appendChild(botMsg);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        };
+
+        sendChat.addEventListener('click', handleSend);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleSend();
+        });
+    }
 });
