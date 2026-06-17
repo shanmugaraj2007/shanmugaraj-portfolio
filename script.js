@@ -219,11 +219,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatInput = document.getElementById('chat-input');
     const sendChat = document.getElementById('send-chat');
     const chatMessages = document.getElementById('chat-messages');
+    const heroSearchBar = document.getElementById('hero-search-bar');
 
     if (chatToggle && chatWindow) {
+        const openChat = () => {
+            chatWindow.classList.add('open');
+            setTimeout(() => chatInput.focus(), 100);
+        };
+
         chatToggle.addEventListener('click', () => {
             chatWindow.classList.toggle('open');
+            if(chatWindow.classList.contains('open')) {
+                setTimeout(() => chatInput.focus(), 100);
+            }
         });
+
+        if (heroSearchBar) {
+            heroSearchBar.addEventListener('click', openChat);
+        }
 
         closeChat.addEventListener('click', () => {
             chatWindow.classList.remove('open');
