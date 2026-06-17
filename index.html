@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHANMUGARAJ K | Portfolio</title>
+    <meta name="description" content="Professional portfolio of SHANMUGARAJ K.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Prevent favicon 404 error -->
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <!-- Background Elements for Glassmorphism -->
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+
+    <header>
+        <nav class="navbar glass-effect">
+            <div class="logo">
+                <a href="#home"><img src="photo.png" alt="SK" class="logo-img"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero section-reveal">
+            <div class="hero-container">
+                <div class="hero-content glass-panel">
+                    <h2 class="greeting">Hello, I'm</h2>
+                    <h1 class="name">SHANMUGARAJ K</h1>
+                    <h3 class="role">Aspiring Software Developer</h3>
+                    <p class="summary">I build modern, scalable, and dynamic web applications. Passionate about coding
+                        and crafting excellent user experiences.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary-btn">View My Work</a>
+                        <a href="resume.png" target="_blank" class="btn secondary-btn"><i class="fas fa-file-alt"></i>
+                            View Resume</a>
+                    </div>
+                    <div class="social-links-hero">
+                        <a href="https://github.com/" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/shanmugaraj-k-53556a397" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:shanmugarajkumar143@gmail.com" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="photo.png" alt="SHANMUGARAJ K" class="profile-img-hero">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content glass-panel">
+                <p>I am passionate about full-stack web development and enjoy building modern, responsive, and
+                    user-friendly web applications. With hands-on experience in React, JavaScript, and database
+                    technologies, I focus on creating efficient and impactful digital solutions. My internship
+                    experience allowed me to work on real-world projects and strengthen my problem-solving abilities.
+                </p>
+
+                <h3 class="skills-title">Core Skills</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+
+                <h3 class="skills-title" style="margin-top: 2.5rem;">Certifications</h3>
+                <div class="certificate-slideshow">
+                    <img src="certificate.png" alt="Certificate 1" class="certificate-img slide active">
+                    <img src="certificate1.png" alt="Certificate 2" class="certificate-img slide">
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-reveal">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-panel">
+                    <div class="project-info">
+                        <h3>Weather App</h3>
+                        <p>A dynamic application providing real-time weather forecasts using a REST API.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>API</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card glass-panel">
+                    <div class="project-info">
+                        <h3>Tally Prime Web</h3>
+                        <p>A billing and inventory management system designed with a functional UI reminiscent of Tally.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card glass-panel">
+                    <div class="project-info">
+                        <h3>Real-time Chart App</h3>
+                        <p>A data visualization tool rendering live data updates dynamically into interactive charts.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-reveal">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-content glass-panel">
+                    <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+                        my
+                        inbox is always open!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:shanmugarajkumar143@gmail.com">shanmugarajkumar143@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/shanmugaraj-k-53556a397"
+                                target="_blank">linkedin.com/in/shanmugaraj-k-53556a397</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/" target="_blank">github.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container glass-panel">
+                    <form class="contact-form" action="https://formsubmit.co/shanmugarajkumar143@gmail.com"
+                        method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <div class="input-group">
+                            <i class="far fa-user"></i>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-tag"></i>
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="input-group textarea-group">
+                            <i class="fas fa-pen"></i>
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn submit-btn">
+                            <i class="fas fa-paper-plane"></i> Connect
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SHANMUGARAJ K. Built with <i class="fas fa-heart" style="color: #ff4757;"></i>.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
