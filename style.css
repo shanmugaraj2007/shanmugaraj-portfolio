@@ -1,14 +1,14 @@
-/* Root Variables for Theming */
+/* Root Variables for Theming - Minimalist Dark */
 :root {
-    --bg-color: #0f172a;
-    --text-color: #f8fafc;
-    --text-muted: #94a3b8;
-    --primary-color: #3b82f6;
-    --primary-glow: rgba(59, 130, 246, 0.5);
-    --secondary-color: #8b5cf6;
-    --glass-bg: rgba(30, 41, 59, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --transition: all 0.3s ease;
+    --bg-color: #050505;
+    --text-color: #e5e5e5;
+    --text-muted: #888888;
+    --primary-color: #ffffff;
+    --primary-glow: rgba(255, 255, 255, 0.1);
+    --secondary-color: #a3a3a3;
+    --glass-bg: rgba(25, 25, 25, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -26,52 +26,9 @@ body {
     position: relative;
 }
 
-/* Background Animated Shapes */
+/* Background Animated Shapes - Removed for minimalist look */
 .bg-shape {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(100px);
-    z-index: -1;
-    animation: float 15s infinite alternate ease-in-out;
-}
-
-.bg-shape-1 {
-    top: -10%;
-    left: -10%;
-    width: 40vw;
-    height: 40vw;
-    background: radial-gradient(circle, var(--secondary-color), transparent 70%);
-    opacity: 0.4;
-}
-
-.bg-shape-2 {
-    bottom: -10%;
-    right: -5%;
-    width: 50vw;
-    height: 50vw;
-    background: radial-gradient(circle, var(--primary-color), transparent 70%);
-    opacity: 0.3;
-    animation-delay: -5s;
-}
-
-.bg-shape-3 {
-    top: 40%;
-    left: 40%;
-    width: 30vw;
-    height: 30vw;
-    background: radial-gradient(circle, #ec4899, transparent 70%);
-    opacity: 0.2;
-    animation-delay: -10s;
-}
-
-@keyframes float {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    100% {
-        transform: translate(50px, 50px) scale(1.1);
-    }
+    display: none;
 }
 
 /* Glassmorphism Utilities */
@@ -84,19 +41,18 @@ body {
 
 .glass-panel {
     background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 2.5rem;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: var(--transition);
 }
 
 .glass-panel:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Typography & General */
@@ -262,14 +218,12 @@ section {
 }
 
 .name {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.1;
-    background: linear-gradient(to right, #fff, #93c5fd);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
+    letter-spacing: -1px;
 }
 
 .role {
@@ -306,15 +260,14 @@ section {
 }
 
 .primary-btn {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    background: #ffffff;
+    color: #000000;
     border: none;
-    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .primary-btn:hover {
-    box-shadow: 0 6px 20px var(--primary-glow);
     transform: translateY(-2px);
+    background: #e5e5e5;
 }
 
 .secondary-btn {
@@ -428,6 +381,95 @@ section {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--primary-color);
     color: white;
+}
+
+/* Skills Sphere */
+.skills-sphere-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.globe-wireframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px dashed rgba(139, 92, 246, 0.2);
+    box-shadow: inset 0 0 40px rgba(139, 92, 246, 0.1), 0 0 40px rgba(59, 130, 246, 0.1);
+    z-index: 0;
+}
+
+.globe-wireframe::before, .globe-wireframe::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px dashed rgba(139, 92, 246, 0.2);
+}
+
+.globe-wireframe::before {
+    transform: rotateX(60deg);
+}
+
+.globe-wireframe::after {
+    transform: rotateY(60deg);
+}
+
+.skills-sphere {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tagcloud {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.tagcloud--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tagcloud--item:hover {
+    color: #ec4899;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+}
+
+.tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.tech-icon i {
+    font-size: 2.5rem;
+}
+
+.tech-icon span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Certificate */

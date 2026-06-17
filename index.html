@@ -48,6 +48,12 @@
                     <h3 class="role">Aspiring Software Developer</h3>
                     <p class="summary">I build modern, scalable, and dynamic web applications. Passionate about coding
                         and crafting excellent user experiences.</p>
+                        
+                    <!-- Mimicking reference site's search bar -->
+                    <div class="ask-me-bar" style="display: flex; align-items: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 0.8rem 1.5rem; border-radius: 50px; margin: 0 auto 2.5rem; max-width: 400px; color: #888;">
+                        <i class="fas fa-sparkles" style="color: #fff; margin-right: 1rem;"></i>
+                        <span style="font-size: 0.95rem;">Ask me anything about Shanmugaraj...</span>
+                    </div>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn primary-btn">View My Work</a>
                         <a href="resume.png" target="_blank" class="btn secondary-btn"><i class="fas fa-file-alt"></i>
@@ -79,15 +85,14 @@
                     experience allowed me to work on real-world projects and strengthen my problem-solving abilities.
                 </p>
 
-                <h3 class="skills-title">Core Skills</h3>
-                <div class="skills-container">
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Next.js</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Git</span>
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <p style="color: var(--text-muted); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem;">Tech Stack</p>
+                    <h3 class="skills-title" style="font-size: 2.5rem; display: inline-block;">My <span style="background: linear-gradient(to right, #8b5cf6, #ec4899); -webkit-background-clip: text; color: transparent;">Skills</span></h3>
+                </div>
+                
+                <div class="skills-sphere-container">
+                    <div class="globe-wireframe"></div>
+                    <div class="skills-sphere"></div>
                 </div>
 
                 <h3 class="skills-title" style="margin-top: 2.5rem;">Certifications</h3>
@@ -199,6 +204,7 @@
     <footer>
         <p>&copy; 2026 SHANMUGARAJ K. Built with <i class="fas fa-heart" style="color: #ff4757;"></i>.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
     <script src="script.js"></script>
 </body>
 

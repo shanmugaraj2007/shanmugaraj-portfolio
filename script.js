@@ -174,4 +174,30 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[slideIndex].classList.add('active');
         }, 3000);
     }
+
+    // Skills 3D Sphere (TagCloud)
+    const sphereContainer = document.querySelector('.skills-sphere');
+    if (sphereContainer && typeof TagCloud !== 'undefined') {
+        const texts = [
+            '<div class="tech-icon"><i class="fab fa-html5" style="color: #e34f26;"></i><span>HTML5</span></div>',
+            '<div class="tech-icon"><i class="fab fa-css3-alt" style="color: #1572b6;"></i><span>CSS3</span></div>',
+            '<div class="tech-icon"><i class="fab fa-js" style="color: #f7df1e;"></i><span>JS</span></div>',
+            '<div class="tech-icon"><i class="fab fa-react" style="color: #61dafb;"></i><span>React</span></div>',
+            '<div class="tech-icon"><i class="fab fa-python" style="color: #3776ab;"></i><span>Python</span></div>',
+            '<div class="tech-icon"><i class="fab fa-git-alt" style="color: #f05032;"></i><span>Git</span></div>',
+            '<div class="tech-icon"><i class="fab fa-node-js" style="color: #339933;"></i><span>Node.js</span></div>',
+            '<div class="tech-icon"><i class="fab fa-github" style="color: #ffffff;"></i><span>GitHub</span></div>',
+            '<div class="tech-icon"><i class="fas fa-database" style="color: #4db33d;"></i><span>MongoDB</span></div>',
+            '<div class="tech-icon"><i class="fas fa-layer-group" style="color: #fff;"></i><span>Next.js</span></div>'
+        ];
+
+        TagCloud('.skills-sphere', texts, {
+            radius: window.innerWidth < 768 ? 130 : 170,
+            maxSpeed: 'normal',
+            initSpeed: 'normal',
+            direction: 135,
+            keep: true,
+            useHTML: true
+        });
+    }
 });
